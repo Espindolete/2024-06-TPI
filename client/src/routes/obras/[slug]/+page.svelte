@@ -85,7 +85,7 @@
     // Tomar los primeros 8 caracteres del hash
     const hashedSlug = hash.substring(0, 8);
     //ojota con esto porque en local deberia llevar a localhost
-    const url = `http://https://2024-06-tpi-omega.vercel.app/votacion?slug=${nombreObra}-${hashedSlug}`;
+    const url = `https://2024-06-tpi-omega.vercel.app/votacion?slug=${nombreObra}-${hashedSlug}`;
 
     // Generar el código QR
     qrCodeUrl = url;
