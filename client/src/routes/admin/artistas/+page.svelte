@@ -8,7 +8,7 @@
   // Función para obtener artistas desde la API
   async function fetchArtistas(query = "", criterio = 'nombre', orden = 'ASC') {
     try {
-      const res = await axios.get(`http://localhost:3001/api/escultores`, {
+      const res = await axios.get(`https://2024-06-tpi-production.up.railway.app/api/escultores`, {
         params: {
           search: query,     // Parámetro de búsqueda
           sortBy: criterio,  // Criterio de ordenación (nombre, f_creacion, promedio)
@@ -43,7 +43,7 @@
   // Función para borrar un artista
   const eliminarArtista = async (dni) => {
     try {
-        const res = await axios.post('http://localhost:3001/api/borrarArtista', { dni });
+        const res = await axios.post('https://2024-06-tpi-production.up.railway.app/api/borrarArtista', { dni });
 
         // Verificar que el artista fue borrado exitosamente
         if (res.status === 200) {

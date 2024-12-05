@@ -7,7 +7,7 @@
   // Función para obtener esculturas desde la API
   async function fetchEsculturas(query = "", criterio = 'promedio', orden = 'DESC') {
     try {
-      const res = await axios.get(`http://localhost:3001/api/esculturas`, {
+      const res = await axios.get(`https://2024-06-tpi-production.up.railway.app/api/esculturas`, {
         params: {
           search: query,     // Parámetro de búsqueda
           sortBy: criterio,  // Criterio de ordenación (titulo, f_creacion, promedio)
@@ -42,7 +42,7 @@
   // Función para borrar una escultura
   const eliminarEscultura = async (nombreEscultura) => {
     try {
-      const res = await axios.post('http://localhost:3001/api/borrarEscultura', { nombreEscultura });
+      const res = await axios.post('https://2024-06-tpi-production.up.railway.app/api/borrarEscultura', { nombreEscultura });
 
       // Verificar que la escultura fue borrada exitosamente
       if (res.status === 200) {

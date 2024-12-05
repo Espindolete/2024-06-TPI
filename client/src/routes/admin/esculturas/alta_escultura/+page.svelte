@@ -37,7 +37,7 @@
   
   async function fetchArtistas(query = "", criterio = 'nombre', orden = 'ASC') {
     try {
-        const res = await axios.get(`http://localhost:3001/api/escultores`, {
+        const res = await axios.get(`https://2024-06-tpi-production.up.railway.app/api/escultores`, {
             params: {
                 search: query,     // Parámetro de búsqueda
                 sortBy: criterio,  // Criterio de ordenación (nombre, f_creacion, promedio)
@@ -67,7 +67,7 @@
 
   async function fetchEventos(query = "", criterio = 'nombre', orden = 'ASC') {
     try {
-        const res = await axios.get(`http://localhost:3001/api/eventos`, {
+        const res = await axios.get(`https://2024-06-tpi-production.up.railway.app/api/eventos`, {
             params: {
                 search: query,     // Parámetro de búsqueda
                 sortBy: criterio,  // Criterio de ordenación (nombre, f_creacion, promedio)
@@ -147,7 +147,7 @@
     try {
       //Registrar escultura
 
-      const esculturaRes = await axios.post('http://localhost:3001/api/esculturaNueva', {
+      const esculturaRes = await axios.post('https://2024-06-tpi-production.up.railway.app/api/esculturaNueva', {
           nombre,
           f_creacion,
           antecedentes,
@@ -161,7 +161,7 @@
       // Registrar artistas relacionados
       for (const artista of artistasSeleccionados) {
         let DNI = artista.DNI
-        await axios.post('http://localhost:3001/api/hechasPorNueva', {
+        await axios.post('https://2024-06-tpi-production.up.railway.app/api/hechasPorNueva', {
           DNI,
           nombre_escultura,
         });
@@ -172,7 +172,7 @@
       for (const evento of eventosSeleccionados) {
         let nombre_evento = evento
         
-        await axios.post('http://localhost:3001/api/compitenNuevo', {
+        await axios.post('https://2024-06-tpi-production.up.railway.app/api/compitenNuevo', {
           nombre_evento,
           nombre_escultura,
         });
@@ -194,7 +194,7 @@
         imagenFormData.append('nombre_escultura', nombre_escultura);
 
         // Subir la imagen a la API
-        const response = await axios.post('http://localhost:3001/api/imagenNueva', imagenFormData, {
+        const response = await axios.post('https://2024-06-tpi-production.up.railway.app/api/imagenNueva', imagenFormData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },

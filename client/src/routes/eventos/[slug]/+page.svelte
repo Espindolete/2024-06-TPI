@@ -17,7 +17,7 @@
   async function fetchEvento(slug) {
     mostrandoCarga = true;
     try {
-      const res = await axios.get(`http://localhost:3001/api/eventos/${slug}`, {
+      const res = await axios.get(`https://2024-06-tpi-production.up.railway.app/api/eventos/${slug}`, {
         params: { nombre: slug },
       });
       data = res.data;
@@ -37,7 +37,7 @@
   }
 
   function generarEnlacesCompartir() {
-    const urlPagina = `http://localhost:3001/api/eventos/${slug}`; // Obtiene la URL actual de la página
+    const urlPagina = `https://2024-06-tpi-production.up.railway.app/api/eventos/${slug}`; // Obtiene la URL actual de la página
     const mensaje = "¡Mira esta obra!"; // Mensaje predeterminado para compartir
     return {
       facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(

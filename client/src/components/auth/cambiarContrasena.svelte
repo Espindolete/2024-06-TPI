@@ -39,7 +39,7 @@
   console.log('Datos enviados:', { email, contraseña_actual, contraseña_nueva1 }); // Para depuración
 
   try {
-    const response = await fetch('http://localhost:3001/api/cambiarContrasena', {
+    const response = await fetch('https://2024-06-tpi-production.up.railway.app/api/cambiarContrasena', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

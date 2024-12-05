@@ -11,7 +11,7 @@
     // Función para realizar la búsqueda
     async function fetchEscultores() {
       try {
-        const res = await axios.get(`http://localhost:3001/api/escultores`, {
+        const res = await axios.get(`https://2024-06-tpi-production.up.railway.app/api/escultores`, {
           params: {
             search: "",
             sortBy: "promedio",

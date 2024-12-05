@@ -47,7 +47,7 @@
       formData.append('contrasena', contraseña);
       formData.append('imagenPerfil', imagenPerfil);
 
-      const res = await axios.post('http://localhost:3001/api/artistaNuevo', formData, {
+      const res = await axios.post('https://2024-06-tpi-production.up.railway.app/api/artistaNuevo', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

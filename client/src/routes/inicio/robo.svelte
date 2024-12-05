@@ -11,7 +11,7 @@
 
     async function fetchObras() {
         try {
-            const res = await axios.get(`http://localhost:3001/api/esculturas`, {
+            const res = await axios.get(`https://2024-06-tpi-production.up.railway.app/api/esculturas`, {
                 params: {
                     search: "",    
                     sortBy:  'promedio',  

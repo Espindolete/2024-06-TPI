@@ -62,7 +62,7 @@
   async function obtenerDatosEvento() {
     mostrandoCarga = true;
     try {
-      const res = await axios.get(`http://localhost:3001/api/eventos/${slug}`, {
+      const res = await axios.get(`https://2024-06-tpi-production.up.railway.app/api/eventos/${slug}`, {
         params: { nombre: slug },
       });
       evento = res.data.evento;
@@ -97,7 +97,7 @@
         hora_fin,
       };
 
-      const res = await axios.post(`http://localhost:3001/api/modificarEvento`, eventoActualizado);
+      const res = await axios.post(`https://2024-06-tpi-production.up.railway.app/api/modificarEvento`, eventoActualizado);
       mensaje = res.data.mensaje || 'Evento modificado con éxito';
     } catch (error) {
       console.error('Error al modificar el evento:', error);

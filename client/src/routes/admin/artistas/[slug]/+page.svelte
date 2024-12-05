@@ -38,7 +38,7 @@
     async function obtenerDatosEscultor() {
       mostrandoCarga = true;
       try {
-        const response = await axios.get(`http://localhost:3001/api/escultores/${slug}`, {
+        const response = await axios.get(`https://2024-06-tpi-production.up.railway.app/api/escultores/${slug}`, {
             params: { nombre: slug }
         });
         const data = response.data.escultor;
@@ -81,7 +81,7 @@
         imagenPerfil_nueva: imageUrl
       };
       console.log(artistaActualizado)
-        const res = await axios.post(`http://localhost:3001/api/modificarArtista`, artistaActualizado);
+        const res = await axios.post(`https://2024-06-tpi-production.up.railway.app/api/modificarArtista`, artistaActualizado);
         mensaje = res.data.mensaje || 'Escultor modificado con éxito';
       } catch (error) {
         console.error('Error al modificar el escultor:', error);

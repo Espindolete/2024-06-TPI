@@ -25,7 +25,7 @@
   $: slug = $page.params.slug;
 
   let obra = {}; // Objeto vacío para los datos de la obra
-  let obraUrl = `http://localhost:3001/api/obras/${obra.slug}`;
+  let obraUrl = `https://2024-06-tpi-production.up.railway.app/api/obras/${obra.slug}`;
 
   function decodificarToken(token) {
     try {
@@ -43,7 +43,7 @@
     nombreObra = slug;
     try {
       const response = await axios.get(
-        `http://localhost:3001/api/obras/${slug}`,
+        `https://2024-06-tpi-production.up.railway.app/api/obras/${slug}`,
         {
           // Cambia la ruta a '/api/obras'
           params: { nombre: slug },
@@ -94,7 +94,7 @@
   }
 
   function generarEnlacesCompartir() {
-    const urlPagina = `http://localhost:3001/api/obras/${slug}`; // Obtiene la URL actual de la página
+    const urlPagina = `https://2024-06-tpi-production.up.railway.app/api/obras/${slug}`; // Obtiene la URL actual de la página
     const mensaje = "¡Mira esta obra!"; // Mensaje predeterminado para compartir
     return {
       facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(

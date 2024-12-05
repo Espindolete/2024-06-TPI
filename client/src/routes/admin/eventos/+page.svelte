@@ -8,7 +8,7 @@
   // Función para obtener eventos desde la API
   async function fetchEventos(query = "", criterio = 'nombre', orden = 'ASC') {
       try {
-          const res = await axios.get(`http://localhost:3001/api/eventos`, {
+          const res = await axios.get(`https://2024-06-tpi-production.up.railway.app/api/eventos`, {
               params: {
                   search: query,     // Parámetro de búsqueda
                   sortBy: criterio,  // Criterio de ordenación (nombre, f_creacion, promedio)
@@ -42,7 +42,7 @@
   // Función para borrar evento
   const borrarEvento = async (nombre_evento, lugar_evento) => {
         try {
-            const res = await axios.post('http://localhost:3001/api/borrarEvento', {
+            const res = await axios.post('https://2024-06-tpi-production.up.railway.app/api/borrarEvento', {
                 nombre_evento: nombre_evento,
                 lugar_evento: lugar_evento
             });

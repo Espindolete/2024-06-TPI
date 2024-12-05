@@ -36,7 +36,7 @@
     async function obtenerDatosEscultura() {
       mostrandoCarga = true;
       try {
-        const res = await axios.get(`http://localhost:3001/api/escultura/${id}`);
+        const res = await axios.get(`https://2024-06-tpi-production.up.railway.app/api/escultura/${id}`);
         const data = res.data;
         nombre = data.nombre;
         fechaCreacion = data.fechaCreacion;
@@ -73,7 +73,7 @@
           formData.append('imagenes', imagen);
         });
   
-        const res = await axios.put(`http://localhost:3001/api/escultura/${id}`, formData, {
+        const res = await axios.put(`https://2024-06-tpi-production.up.railway.app/api/escultura/${id}`, formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
